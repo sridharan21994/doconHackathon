@@ -1,0 +1,165 @@
+{
+  "count": 1083,
+  "results": [
+      {
+          "symptomID": "F78249",
+          "name": "Dryness of feet",
+          "isFinding": false,
+          "snomedCT_code": "0",
+          "tags": [],
+          "owner": "master"
+      },
+      {
+          "symptomID": "F42425",
+          "name": "Vaginal dryness",
+          "isFinding": false,
+          "snomedCT_code": "162180002",
+          "tags": [],
+          "owner": "master"
+      },
+      {
+          "symptomID": "F128359",
+          "name": "Dry skin",
+          "isFinding": false,
+          "snomedCT_code": "16386004",
+          "tags": [],
+          "owner": "master"
+      },
+      {
+          "symptomID": "F34147",
+          "name": "Dry mouth",
+          "isFinding": false,
+          "snomedCT_code": "162014002",
+          "tags": [],
+          "owner": "master"
+      },
+      {
+          "symptomID": "F93676",
+          "name": "Dry lips",
+          "isFinding": false,
+          "snomedCT_code": "248181001",
+          "tags": [],
+          "owner": "master"
+      },
+      {
+          "symptomID": "F142990",
+          "name": "Dry hair",
+          "isFinding": false,
+          "snomedCT_code": "79395009",
+          "tags": [],
+          "owner": "master"
+      },
+      {
+          "symptomID": "F77199",
+          "name": "Accident due to heat in drying room",
+          "isFinding": false,
+          "snomedCT_code": "217596003",
+          "tags": [],
+          "owner": "master"
+      },
+      {
+          "symptomID": "F60434",
+          "name": "Pharyngeal dryness",
+          "isFinding": false,
+          "snomedCT_code": "102618009",
+          "tags": [],
+          "owner": "master"
+      },
+      {
+          "symptomID": "F25134",
+          "name": "On examination - dryness of hair (context-dependent category)",
+          "isFinding": false,
+          "snomedCT_code": "162795008",
+          "tags": [],
+          "owner": "master"
+      },
+      {
+          "symptomID": "F23676",
+          "name": "On examination - dry skin (context-dependent category)",
+          "isFinding": false,
+          "snomedCT_code": "164323008",
+          "tags": [],
+          "owner": "master"
+      },
+      {
+          "symptomID": "F22275",
+          "name": "On examination - dry tongue (context-dependent category)",
+          "isFinding": false,
+          "snomedCT_code": "163168003",
+          "tags": [],
+          "owner": "master"
+      },
+      {
+          "symptomID": "F26007",
+          "name": "O/E - abd.skin dry-dehydration",
+          "isFinding": false,
+          "snomedCT_code": "268940004",
+          "tags": [],
+          "owner": "master"
+      },
+      {
+          "symptomID": "F26171",
+          "name": "On examination - abdominal skin dry (context-dependent category)",
+          "isFinding": false,
+          "snomedCT_code": "275958007",
+          "tags": [],
+          "owner": "master"
+      },
+      {
+          "symptomID": "F27504",
+          "name": "C/O: dry skin",
+          "isFinding": false,
+          "snomedCT_code": "416247002",
+          "tags": [],
+          "owner": "master"
+      },
+      {
+          "symptomID": "F27505",
+          "name": "Complaining of dry skin",
+          "isFinding": false,
+          "snomedCT_code": "416247002",
+          "tags": [],
+          "owner": "master"
+      },
+      {
+          "symptomID": "F107560",
+          "name": "Does not use clothes drying equipment",
+          "isFinding": false,
+          "snomedCT_code": "285902005",
+          "tags": [],
+          "owner": "master"
+      },
+      {
+          "symptomID": "F107844",
+          "name": "Does dry washing",
+          "isFinding": false,
+          "snomedCT_code": "286056009",
+          "tags": [],
+          "owner": "master"
+      },
+      {
+          "symptomID": "F106273",
+          "name": "Able to dry self",
+          "isFinding": false,
+          "snomedCT_code": "284828001",
+          "tags": [],
+          "owner": "master"
+      },
+      {
+          "symptomID": "F109645",
+          "name": "Performs washing and drying activities",
+          "isFinding": false,
+          "snomedCT_code": "288550002",
+          "tags": [],
+          "owner": "master"
+      },
+      {
+          "symptomID": "F125558",
+          "name": "Mucous membrane dryness",
+          "isFinding": false,
+          "snomedCT_code": "123640000",
+          "tags": [],
+          "owner": "master"
+      }
+  ]
+}

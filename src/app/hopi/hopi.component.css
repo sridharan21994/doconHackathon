@@ -1,0 +1,55 @@
+:host {
+  max-width: 400px;
+  background: unset;
+}
+:host .ant-layout-header {
+  background: unset;
+  padding: unset;
+  height: unset;
+  line-height: unset;
+}
+:host .ant-layout-content {
+  min-height: 40vh;
+  max-height: 60vh;
+  overflow: auto;
+}
+:host .ant-layout-content .ant-row,
+:host .ant-layout-content .ant-row-flex {
+  margin: 8px 0;
+}
+:host .ant-select {
+  width: 125px;
+}
+:host .anticon {
+  transition: all 0.2s ease-in-out;
+}
+:host .anticon:hover {
+  transform: scale(1.25);
+  transform-origin: center;
+}
+:host .hopis-header {
+  flex-wrap: nowrap;
+  font-size: 150%;
+}
+:host .hopis-header .hopis-description {
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+:host .hopis-header .anticon.anticon-edit {
+  color: orange;
+}
+:host .add-button {
+  width: 100%;
+}
+:host .edit-button {
+  margin-right: 6px;
+}
+:host .delete-button {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  color: grey;
+  font-size: 150%;
+}

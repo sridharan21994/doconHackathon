@@ -1,0 +1,16 @@
+<div>
+  <p class="question">
+    What is the purpose of your visit?
+  </p>
+  <!-- <nz-select style="width: 200px;" nzShowSearch nzAllowClear nzPlaceHolder="Select a person" [(ngModel)]="radioValue">
+    <nz-option nzLabel="Jack" nzValue="jack"></nz-option>
+    <nz-option nzLabel="Lucy" nzValue="lucy"></nz-option>
+    <nz-option nzLabel="Tom" nzValue="tom"></nz-option>
+  </nz-select> -->
+  <nz-radio-group [(ngModel)]="radioValue" (ngModelChange)= " this.onSelect.emit($event)" nzButtonStyle="solid">
+    <label nz-radio-button nzValue="Consultation">Consultation</label>
+    <label nz-radio-button nzValue="Vaccination">Vaccination</label>
+    <label nz-radio-button nzValue="Routine">Routine checkup</label>
+  </nz-radio-group>
+  <!-- <textarea row="4" nz-input placeholder="Add some notes to doctor" [(ngModel)]="inputValue"></textarea> -->
+</div>

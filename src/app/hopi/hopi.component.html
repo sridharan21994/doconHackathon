@@ -1,0 +1,141 @@
+<!-- Edit HOPI
+<form nz-form nz-layout *ngIf="editMode; else hopisTemplate" [formGroup]="form" (ngSubmit)="saveHopi(form)">
+    <nz-header class="hopis-header">
+      <nz-row nzType="flex" nzJustify="space-between" nzAlign="middle">
+        <nz-col>
+          <button type="button" nz-button nzType="danger" nzGhost (click)="editMode = false">Cancel</button>
+        </nz-col>
+        <nz-col class="hopis-description">Add/Edit HOPI</nz-col>
+        <nz-col>
+          <button type="submit" nz-button nzType="primary" nzGhost>Save</button>
+        </nz-col>
+      </nz-row>
+      <nz-divider></nz-divider>
+    </nz-header>
+
+    <nz-content>
+      <nz-form-item>
+        <nz-form-label nzRequired nzSpan="6">Title</nz-form-label>
+        <nz-form-control nzSpan="14">
+          <input nz-input formControlName="query" placeholder="Enter title here" autofocus />
+          <nz-form-explain *ngIf="form.get('query')?.dirty && form.get('query')?.hasError('required')">
+            Please enter title
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+
+      <ng-container formArrayName="options">
+        <nz-form-item *ngFor="let option of options.controls; index as i; trackBy: i">
+          <nz-form-label *ngIf="!i" nzSpan="6" nzRequired>Options</nz-form-label>
+          <nz-form-control nzSpan="14" [nzOffset]="i ? 6 : 0">
+            <input nz-input [formControlName]="i" placeholder="Enter value here" />
+            <nz-form-explain *ngIf="option.dirty && option.hasError('required')">
+              Please enter value
+              <ng-template [ngIf]="options.controls.length > 1">or delete this field</ng-template>
+            </nz-form-explain>
+          </nz-form-control>
+          <nz-form-text *ngIf="options.controls.length > 1">
+            <a class="anticon anticon-minus-circle-o delete-button" (click)="options.removeAt(i)"></a>
+          </nz-form-text>
+        </nz-form-item>
+      </ng-container>
+
+      <nz-form-item>
+        <nz-form-control nzSpan="14" nzOffset="6">
+          <button type="button" nz-button nzType="dashed" class="add-button" (click)="addField()">
+            <i class="anticon anticon-plus"></i>Add field
+          </button>
+        </nz-form-control>
+      </nz-form-item>
+    </nz-content>
+  </form>
+-->
+  <!-- <ng-template #hopisTemplate>
+
+    <nz-header>
+      <nz-row nzType="flex" nzJustify="space-between" nzAlign="middle" class="hopis-header">
+        <nz-col class="hopis-description" [innerHTML]="vm.name"></nz-col>
+        <nz-col>
+          <a class="anticon anticon-edit" *ngIf="hopis.length" (click)="readonly = !readonly"></a>
+        </nz-col>
+      </nz-row>
+      <nz-divider></nz-divider>
+    </nz-header>
+
+    <nz-content>
+      <nz-row nzType="flex" nzJustify="space-between" nzAlign="middle">
+        <nz-col>
+          <strong>Note</strong>
+        </nz-col>
+      </nz-row>
+      <textarea nz-input [nzAutosize]="{ minRows: 2, maxRows: 3 }" placeholder="Enter note here" tabindex="1" [(ngModel)]="attributes.note"></textarea>
+
+      <ng-container *ngIf="hopiType === 'symptoms'; else diagnosisTemplate">
+        <nz-row nzType="flex" nzJustify="space-between" nzAlign="middle">
+          <nz-col>
+            <strong>Duration</strong>
+          </nz-col>
+          <nz-col>
+            <nz-select nzAllowClear nzShowSearch [(ngModel)]="attributes.duration" (nzOnSearch)="onDurationSearch($event)" tabindex="1">
+              <nz-option-group nzLabel="Sugggested" *ngIf="suggestedDurations?.length">
+                <nz-option *ngFor="let dur of suggestedDurations" [nzLabel]="dur.label" [nzValue]="dur.value"></nz-option>
+              </nz-option-group>
+              <nz-option *ngFor="let dur of allDurations" [nzLabel]="dur.label" [nzValue]="dur.value"></nz-option>
+            </nz-select>
+          </nz-col>
+        </nz-row>
+        <nz-row class="radio-group-multiline">
+          <doc-input-group *ngFor="let group of quickDurations" [options]="group" [(ngModel)]="attributes.duration"></doc-input-group>
+        </nz-row>
+
+        <nz-row nzType="flex" nzJustify="space-between" nzAlign="middle">
+          <nz-col>
+            <strong>Severity</strong>
+          </nz-col>
+          <nz-col>
+            <doc-input-group [options]="severities" [(ngModel)]="attributes.severity"></doc-input-group>
+          </nz-col>
+        </nz-row>
+      </ng-container>
+
+      <ng-template #diagnosisTemplate>
+        <nz-row nzType="flex" nzJustify="space-between" nzAlign="middle">
+          <nz-col>
+            <strong>Location</strong>
+          </nz-col>
+        </nz-row>
+        <textarea nz-input [nzAutosize]="{ minRows: 2, maxRows: 3 }" placeholder="Enter location here" tabindex="1" [(ngModel)]="attributes.location"></textarea>
+
+        <nz-row nzType="flex" nzJustify="space-between" nzAlign="middle">
+          <nz-col>
+            <strong>Description</strong>
+          </nz-col>
+          <nz-col>
+            <doc-input-group [options]="descriptions" [(ngModel)]="attributes.diagDescription"></doc-input-group>
+          </nz-col>
+        </nz-row>
+      </ng-template>
+      <nz-divider></nz-divider>
+
+      <nz-row nzType="flex" nzJustify="end" nzAlign="middle" *ngIf="!readonly || !hopis.length">
+        <button nz-button nzType="dashed" (click)="editHopi()">
+          <i class="anticon anticon-plus"></i>Add Options
+        </button>
+      </nz-row>
+
+      <ng-container *ngFor="let hopi of hopis; index as i; trackBy: i">
+        <nz-row nzType="flex" nzJustify="space-between" nzAlign="middle">
+          <nz-col [innerHTML]="hopi.query"></nz-col>
+          <nz-col *ngIf="!readonly">
+            <a class="anticon anticon-edit edit-button" (click)="editHopi(hopi)"></a>
+            <nz-popconfirm nzTitle="Are you sure to delete this option?" nzPlacement="bottom" (nzOnConfirm)="deleteHopi(hopi, i)">
+              <a nz-popconfirm class="anticon anticon-delete"></a>
+            </nz-popconfirm>
+          </nz-col>
+        </nz-row>
+        <nz-row>
+          <doc-input-group multiple size="small" [options]="hopi.options" [(ngModel)]="hopi.value"></doc-input-group>
+        </nz-row>
+      </ng-container>
+    </nz-content>
+  </ng-template> -->

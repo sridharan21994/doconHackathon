@@ -1,0 +1,79 @@
+button {
+  background: #fff;
+  border: 0;
+}
+button:focus {
+  outline: 0;
+}
+
+.bubble {
+  position: relative;
+  margin: 5px;
+  display: inline-block;
+}
+
+.bubble__button {
+  max-width: calc(100vw - 50px);
+  padding: 8px 16px 9px 14px;
+  border-radius: 20px;
+  color: #282828;
+  cursor: pointer;
+  user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.bubble__button--unselected {
+  border: 1px solid #519AD3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.bubble__button--unselected:hover {
+  background-color: #EDF7FF;
+  border: 1px solid #EDF7FF;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.bubble__button--selected {
+  border: 1px solid #D5EAFB;
+  background-color: #D5EAFB;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.bubble__button--selected:hover, .bubble__button--selected:focus {
+  background-color: #407AE2;
+  border: 1px solid #407AE2;
+  color: #FFFFFF;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.bubble__button[disabled] {
+  background-color: #D8D8D8;
+  border: 1px solid #D8D8D8;
+  color: #B0B0B0;
+  cursor: default;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.bubble__icon {
+  position: absolute;
+  right: -10px;
+  top: 0px;
+  padding: 1px 5px;
+  background: #fff;
+  border-radius: 20px;
+  border: 0;
+  cursor: pointer;
+}
+.bubble__icon--remove {
+  color: #ffa39e;
+}
+.bubble__icon--add {
+  color: green;
+}

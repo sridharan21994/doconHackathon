@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+::ng-deep .ant-popover-inner-content {
+  padding: 12px;
+}
+::ng-deep .ant-divider-horizontal {
+  margin: 8px 0;
+  user-select: none;
+}
+::ng-deep .ant-select:focus {
+  outline: none;
+}
+
+.radio-group-multiline ::ng-deep .ant-radio-group {
+  display: flex;
+}
+.radio-group-multiline ::ng-deep .ant-radio-group .ant-radio-button-wrapper {
+  flex: 1 1 20%;
+  padding: 0 6px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.radio-group-multiline ::ng-deep .ant-radio-group:first-child:not(:last-child) .ant-radio-button-wrapper:first-child:not(:last-child) {
+  border-radius: 4px 0 0 0;
+}
+.radio-group-multiline ::ng-deep .ant-radio-group:first-child:not(:last-child) .ant-radio-button-wrapper:last-child:not(:first-child) {
+  border-radius: 0 4px 0 0;
+}
+.radio-group-multiline ::ng-deep .ant-radio-group:last-child:not(:first-child) .ant-radio-button-wrapper {
+  margin-top: -1px;
+}
+.radio-group-multiline ::ng-deep .ant-radio-group:last-child:not(:first-child) .ant-radio-button-wrapper:first-child:not(:last-child) {
+  border-radius: 0 0 0 4px;
+}
+.radio-group-multiline ::ng-deep .ant-radio-group:last-child:not(:first-child) .ant-radio-button-wrapper:last-child:not(:first-child) {
+  border-radius: 0 0 4px 0;
+}
+.radio-group-multiline ::ng-deep .ant-radio-group:not(:first-child):not(:last-child) .ant-radio-button-wrapper {
+  margin-top: -1px;
+}
+.radio-group-multiline ::ng-deep .ant-radio-group:not(:first-child):not(:last-child) .ant-radio-button-wrapper:first-child, .radio-group-multiline ::ng-deep .ant-radio-group:not(:first-child):not(:last-child) .ant-radio-button-wrapper:last-child {
+  border-radius: 0;
+}
+
+:-webkit-autofill, :-webkit-autofill:active, :-webkit-autofill:focus, :-webkit-autofill:hover {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+::-webkit-contacts-auto-fill-button,
+::-webkit-credentials-auto-fill-button {
+  display: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
+::-webkit-scrollbar-thumb:active, ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb:vertical {
+  min-height: 10px;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  min-width: 10px;
+}

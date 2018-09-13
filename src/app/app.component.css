@@ -1,0 +1,28 @@
+
+* ::ng-deep{
+  background-color: #ECECEC;
+}
+
+.header {
+    height: 30px;
+    background-color: #1890ff;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    line-height: 30px;
+}
+
+.footer {
+    height: 30px;
+    background-color: #1890ff;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    line-height: 30px;
+}

@@ -1,0 +1,50 @@
+<nz-card nzBordered="true" class = "container">
+  <div *ngIf="this.selectedValue!=='submit'">
+    <app-radio-button-questions *ngIf="selectedValue !=='Consultation'" (onSelect)="onSelect($event)">
+    </app-radio-button-questions>
+      <div (click)="bubbleClick($event)" *ngIf="selectedValue==='Consultation'">
+          <app-bubble *ngFor="let symptom of symptoms" [symptomID]="symptom.symptomID" [selected]="data[symptom.symptomID]?true:false">
+              {{symptom.name}}
+          </app-bubble>
+      </div>
+      <div *ngIf="selectedValue==='Consultation'">
+        <button nz-button nzType="primary" (click)="submit()" >Submit</button>
+      </div>
+      <nz-modal [(nzVisible)]="isVisible" [nzFooter]="modalFooter" [nzTitle]="selectedSymptom" (nzOnCancel)="handleCancel()">
+          <nz-row nzType="flex" nzJustify="space-between" nzAlign="middle">
+              <nz-col>
+                <strong>Duration</strong>
+              </nz-col>
+              <nz-col>
+                  <nz-select style="width: 120px;" [(ngModel)]="dropdownValue" nzAllowClear nzPlaceHolder="Choose">
+                     <div *ngFor="let option of durationOptions">
+                        <nz-option [nzValue]="option" [nzLabel]="option"></nz-option>
+                      </div>
+                    </nz-select>
+              </nz-col>
+            </nz-row>
+            <nz-row nzType="flex" nzJustify="space-between" nzAlign="middle">
+              <nz-col>
+                  <strong>Severity</strong>
+                </nz-col>
+              <nz-col>
+                  <nz-radio-group [(ngModel)]="severity" nzButtonStyle="solid">
+                      <label nz-radio-button nzValue="mild">mild</label>
+                      <label nz-radio-button nzValue="moderate">moderate</label>
+                      <label nz-radio-button nzValue="severe">severe</label>
+                    </nz-radio-group>
+              </nz-col>
+            </nz-row>
+            <ng-template #modalFooter>
+                <button nz-button nzType="default" (click)="RemoveFromList()">Remove</button>
+                <button nz-button nzType="primary" (click)="handleOk()">Add</button>
+              </ng-template>
+        </nz-modal>
+      </div>
+     <div *ngIf="this.selectedValue==='submit'">
+          Thank you for your response!
+     </div>
+    <!-- <app-slider-questions>
+    </app-slider-questions> -->
+    <!-- <button nz-button nzType="primary">Next<i class="anticon anticon-right"></i></button> -->
+</nz-card>

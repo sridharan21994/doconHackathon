@@ -1,0 +1,12 @@
+<div class="bubble">
+    <button [ngClass]="{'bubble__button':true, 'bubble__button--selected':selected, 'bubble__button--unselected':!selected}"
+      [disabled]="disabled" [attr.data-symptomID]="symptomID">
+      <ng-content></ng-content>
+    </button>
+    <!-- <button class="bubble__icon bubble__icon--remove" *ngIf="selected" (click)="onRemove.emit($event)">
+      <i class="anticon anticon-close-circle"></i>
+    </button> -->
+    <button class="bubble__icon bubble__icon--add" *ngIf="add" (click)="onAdd.emit($event)">
+      <i class="anticon anticon-plus-circle"></i>
+    </button>
+  </div>
